@@ -1,0 +1,88 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: #0a0a2a;
+    color: #00f7ff;
+    min-height: 100vh;
+}
+
+/* 语言切换器（保持不变） */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#languageSelect {
+    background: rgba(63, 134, 175, 0.8);
+    border: 1px solid #00f7ff;
+    color: #00f7ff;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+/* 主标题 */
+h1[data-translate="welcome"] {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+/* 品牌选择器（关键修改） */
+.brand-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.brand-btn {
+    background: rgba(126, 127, 184, 0.9);
+    border: 2px solid #00f7ff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 保留的悬浮效果 */
+.brand-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #00f7ff;
+}
+
+/* 品牌图标（静态显示） */
+.brand-icon {
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+[data-brand="byd"] .brand-icon {
+    background-image: url('https://p.sda1.dev/23/d22843a4a6f7f700eb8b42120e36b9ea/byd t.png');
+}
+
+[data-brand="zeekr"] .brand-icon {
+    background-image: url('https://p.sda1.dev/23/19a86106eaef11fd07bd14016e26bbff/zeekr t.png');
+}
+
+/* 品牌文字样式 */
+.brand-btn span:last-child {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}

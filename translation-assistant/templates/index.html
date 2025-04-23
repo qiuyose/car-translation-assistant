@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Translation Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- 在 index.html 和 dialog.html 的 head 中添加 -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+        </select>
+    </div>
+
+    <h1 data-translate="welcome">Welcome</h1>
+    
+    <!-- 修改品牌按钮部分 -->
+<div class="brand-selector">
+    <button class="brand-btn" data-brand="byd">
+        <span class="brand-icon"></span>
+        <span data-translate="byd">BYD</span>
+    </button>
+    <button class="brand-btn" data-brand="zeekr">
+        <span class="brand-icon"></span>
+        <span data-translate="zeekr">ZEEKR</span>
+    </button>
+</div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

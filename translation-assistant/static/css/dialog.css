@@ -1,0 +1,134 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: #0a0a1a;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 全息投影背景 */
+.hologram-container {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: 
+        linear-gradient(45deg, 
+            transparent 49.9%, 
+            rgba(0,247,255,0.1) 50%, 
+            transparent 50.1%
+        ),
+        linear-gradient(-45deg, 
+            transparent 49.9%, 
+            rgba(0,247,255,0.1) 50%, 
+            transparent 50.1%
+        );
+    background-size: 3em 3em;
+    animation: gridMove 20s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes gridMove {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 指令反馈面板 */
+.command-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+}
+
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #00f7ff;
+    border-radius: 50%;
+    animation: pulse 3s infinite;
+}
+
+.command-display {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00f7ff;
+    font-size: 24px;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+/* 语音交互界面 */
+.voice-interface {
+    position: fixed;
+    bottom: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.neon-btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(0,15,30,0.9);
+    border: 2px solid #00f7ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 30px rgba(0,247,255,0.3);
+}
+
+.neon-btn:hover {
+    box-shadow: 0 0 50px rgba(0,247,255,0.6);
+}
+
+.mic-container {
+    width: 40px;
+    height: 40px;
+}
+
+.mic-icon {
+    fill: #00f7ff;
+    filter: drop-shadow(0 0 5px #00f7ff);
+    transition: all 0.3s;
+}
+
+.btn-label {
+    position: absolute;
+    bottom: -35px;
+    color: #00f7ff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 120px;
+}
+
+/* 动态效果 */
+@keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.5); }
+}
+
+.neon-btn.active {
+    border-color: #ff0066;
+    box-shadow: 0 0 50px rgba(255,0,102,0.5);
+}
+.neon-btn.active .mic-icon {
+    fill: #ff0066;
+    filter: drop-shadow(0 0 10px #ff0066);
+}

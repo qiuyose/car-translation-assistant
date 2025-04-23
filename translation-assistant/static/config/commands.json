@@ -1,0 +1,16 @@
+{
+    "en": {
+        "open_the_window": "open_window.mp3",
+        "turn_on_the_air_conditioner":"turn_on_the_air_conditioner.mp3",
+        "turn_on_the_music": "turn_on_the_music.mp3",
+        "close_the_window": "close_the_window.mp3",
+        "turn_off_the_air_conditioning":"turn_off_the_air_conditioning.mp3",
+        "turn_off_the_music":"turn_off_the_music.mp3"
+    },
+    "ru": {
+        "открой окно": "open_window.mp3",
+        "включи кондиционер": "turn_on_the_air_conditioner.mp3",
+        "включи музыку": "turn_on_the_music.mp3",
+        "закрой окно": "close_the_windows.mp3"
+    }
+}
